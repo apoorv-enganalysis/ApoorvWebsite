@@ -41,7 +41,7 @@
                     <span class="highlight">at ASML</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Specializing in Finite Element Analysis, COMSOL Multiphysics, 
+                    Specializing in Finite Element Analysis, COMSOL Multiphysics,
                     Dynamics, and Precision Flexure Design
                 </p>
                 <div class="hero-buttons">
@@ -65,52 +65,52 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                                         <p>
-                         I am a passionate mechanical engineer with 10 years of industry experience, currently working at ASML 
-                         where I contribute to the development of cutting-edge semiconductor manufacturing equipment. My expertise 
-                         lies in system-level design for electro-mechanical/opto-mechanical products, with deep knowledge in 
-                         GD&T, thermal engineering, kinematics and dynamics in product design & development.
-                     </p>
-                     <p>
-                         With extensive experience in linear, non-linear, implicit and explicit Finite Element analysis, 
-                         I specialize in performing validation and test experiments for post-processing and statistical analysis. 
-                         I support product roadmaps by researching new sensor technologies and developing comprehensive reports 
-                         on feasibility analysis to communicate simulation results, insights, and recommendations to both internal 
-                         teams and external suppliers.
-                     </p>
+                    <p>
+                        I am a passionate mechanical engineer with 10 years of industry experience, currently working at ASML
+                        where I contribute to the development of cutting-edge semiconductor manufacturing equipment. My expertise
+                        lies in system-level design for electro-mechanical/opto-mechanical products, with deep knowledge in
+                        GD&T, thermal engineering, kinematics and dynamics in product design & development.
+                    </p>
+                    <p>
+                        With extensive experience in linear, non-linear, implicit and explicit Finite Element analysis,
+                        I specialize in performing validation and test experiments for post-processing and statistical analysis.
+                        I support product roadmaps by researching new sensor technologies and developing comprehensive reports
+                        on feasibility analysis to communicate simulation results, insights, and recommendations to both internal
+                        teams and external suppliers.
+                    </p>
                     <div class="skills">
-                                                 <div class="skill-category">
-                             <h3>Simulation & Analysis</h3>
-                             <div class="skill-tags">
-                                 <span class="skill-tag">ANSYS</span>
-                                 <span class="skill-tag">COMSOL</span>
-                                 <span class="skill-tag">Simulink</span>
-                                 <span class="skill-tag">MATLAB</span>
-                                 <span class="skill-tag">FEA</span>
-                                 <span class="skill-tag">Thermal Analysis</span>
-                             </div>
-                         </div>
-                         <div class="skill-category">
-                             <h3>Design & Engineering</h3>
-                             <div class="skill-tags">
-                                 <span class="skill-tag">NX</span>
-                                 <span class="skill-tag">SolidWorks</span>
-                                 <span class="skill-tag">Fusion 360</span>
-                                 <span class="skill-tag">GD&T</span>
-                                 <span class="skill-tag">FMEA</span>
-                                 <span class="skill-tag">DFM/DFA</span>
-                             </div>
-                         </div>
-                         <div class="skill-category">
-                             <h3>Programming & Tools</h3>
-                             <div class="skill-tags">
-                                 <span class="skill-tag">Java</span>
-                                 <span class="skill-tag">C#</span>
-                                 <span class="skill-tag">LabVIEW</span>
-                                 <span class="skill-tag">MEScope</span>
-                                 <span class="skill-tag">Arduino</span>
-                             </div>
-                         </div>
+                        <div class="skill-category">
+                            <h3>Simulation & Analysis</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">ANSYS</span>
+                                <span class="skill-tag">COMSOL</span>
+                                <span class="skill-tag">Simulink</span>
+                                <span class="skill-tag">MATLAB</span>
+                                <span class="skill-tag">FEA</span>
+                                <span class="skill-tag">Thermal Analysis</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Design & Engineering</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">NX</span>
+                                <span class="skill-tag">SolidWorks</span>
+                                <span class="skill-tag">Fusion 360</span>
+                                <span class="skill-tag">GD&T</span>
+                                <span class="skill-tag">FMEA</span>
+                                <span class="skill-tag">DFM/DFA</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Programming & Tools</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">LabVIEW</span>
+                                <span class="skill-tag">MEScope</span>
+                                <span class="skill-tag">Arduino</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,9 +134,11 @@
                         <h3>Finite Element Analysis Fundamentals</h3>
                         <p>Understanding the basics of FEA and its applications in mechanical engineering.</p>
                         <div class="interactive-controls">
-                            <label for="mesh-density">Mesh Density:</label>
-                            <input type="range" id="mesh-density" min="1" max="10" value="5">
-                            <span id="mesh-value">5</span>
+                            <div class="control-group">
+                                <label for="mesh-density">Mesh Density:</label>
+                                <input type="range" id="mesh-density" min="1" max="10" value="5">
+                                <span id="mesh-value">5</span>
+                            </div>
                         </div>
                         <button class="btn btn-primary" onclick="loadFEAArticle()">Read More</button>
                     </div>
@@ -154,9 +156,11 @@
                         <h3>COMSOL Multiphysics Simulations</h3>
                         <p>Exploring multiphysics simulations for thermal and structural analysis.</p>
                         <div class="interactive-controls">
-                            <label for="temperature">Temperature (°C):</label>
-                            <input type="range" id="temperature" min="20" max="200" value="100">
-                            <span id="temp-value">100°C</span>
+                            <div class="control-group">
+                                <label for="temperature">Temperature (°C):</label>
+                                <input type="range" id="temperature" min="20" max="200" value="100">
+                                <span id="temp-value">100°C</span>
+                            </div>
                         </div>
                         <button class="btn btn-primary" onclick="loadCOMSOLArticle()">Read More</button>
                     </div>
@@ -172,16 +176,18 @@
                             </div>
                         </div>
                     </div>
-                                            <div class="blog-content">
-                            <h3>Dynamics & Vibration Analysis</h3>
-                            <p>Understanding spring-mass systems and vibration fundamentals.</p>
-                            <div class="interactive-controls">
+                    <div class="blog-content">
+                        <h3>Dynamics & Vibration Analysis</h3>
+                        <p>Understanding spring-mass systems and vibration fundamentals.</p>
+                        <div class="interactive-controls">
+                            <div class="control-group">
                                 <label for="frequency">Frequency (Hz):</label>
                                 <input type="range" id="frequency" min="1" max="10" value="5">
                                 <span id="freq-value">5 Hz</span>
                             </div>
-                            <button class="btn btn-primary" onclick="loadDynamicsArticle()">Read More</button>
                         </div>
+                        <button class="btn btn-primary" onclick="loadDynamicsArticle()">Read More</button>
+                    </div>
                 </article>
 
                 <!-- Flexure Design Blog -->
@@ -198,9 +204,11 @@
                         <h3>Precision Flexure Design</h3>
                         <p>Designing compliant mechanisms for high-precision applications.</p>
                         <div class="interactive-controls">
-                            <label for="deflection">Deflection (mm):</label>
-                            <input type="range" id="deflection" min="0" max="5" value="2" step="0.1">
-                            <span id="def-value">2.0 mm</span>
+                            <div class="control-group">
+                                <label for="deflection">Deflection (mm):</label>
+                                <input type="range" id="deflection" min="0" max="5" value="2" step="0.1">
+                                <span id="def-value">2.0 mm</span>
+                            </div>
                         </div>
                         <button class="btn btn-primary" onclick="loadFlexureArticle()">Read More</button>
                     </div>
@@ -347,8 +355,10 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Let's Connect</h3>
-                    <p>I'm always interested in discussing mechanical engineering challenges, 
-                    simulation techniques, and innovative design solutions.</p>
+                    <p>
+                        I'm always interested in discussing mechanical engineering challenges,
+                        simulation techniques, and innovative design solutions.
+                    </p>
                     <div class="contact-methods">
                         <div class="contact-method">
                             <i class="fas fa-envelope"></i>
@@ -417,15 +427,8 @@
         </div>
     </footer>
 
-    <!-- Modal for Blog Articles -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modal-body"></div>
-        </div>
-    </div>
+    <!-- Modal will be created dynamically by JavaScript -->
 
     <script src="script.js"></script>
 </body>
 </html>
-

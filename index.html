@@ -117,6 +117,98 @@
         </div>
     </section>
 
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Engineering Blog</h2>
+            <p class="section-subtitle">Interactive explanations of mechanical engineering concepts</p>
+            <div class="blog-grid">
+                <!-- Finite Element Analysis Blog -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="fea-animation">
+                            <canvas id="feaCanvas" width="300" height="200"></canvas>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Finite Element Analysis Fundamentals</h3>
+                        <p>Understanding the basics of FEA and its applications in mechanical engineering.</p>
+                        <div class="interactive-controls">
+                            <label for="mesh-density">Mesh Density:</label>
+                            <input type="range" id="mesh-density" min="1" max="10" value="5">
+                            <span id="mesh-value">5</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="loadFEAArticle()">Read More</button>
+                    </div>
+                </article>
+
+                <!-- COMSOL Multiphysics Blog -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="comsol-animation">
+                            <div class="heat-flow"></div>
+                            <div class="temperature-gradient"></div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>COMSOL Multiphysics Simulations</h3>
+                        <p>Exploring multiphysics simulations for thermal and structural analysis.</p>
+                        <div class="interactive-controls">
+                            <label for="temperature">Temperature (°C):</label>
+                            <input type="range" id="temperature" min="20" max="200" value="100">
+                            <span id="temp-value">100°C</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="loadCOMSOLArticle()">Read More</button>
+                    </div>
+                </article>
+
+                <!-- Dynamics Blog -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="dynamics-animation">
+                            <div class="spring-mass-system">
+                                <div class="mass"></div>
+                                <div class="spring"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Dynamics & Vibration Analysis</h3>
+                        <p>Understanding spring-mass systems and vibration fundamentals.</p>
+                        <div class="interactive-controls">
+                            <label for="frequency">Frequency (Hz):</label>
+                            <input type="range" id="frequency" min="1" max="10" value="5">
+                            <span id="freq-value">5 Hz</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="loadDynamicsArticle()">Read More</button>
+                    </div>
+                </article>
+
+                <!-- Flexure Design Blog -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="flexure-animation">
+                            <div class="flexure-beam">
+                                <div class="flexure-joint"></div>
+                                <div class="flexure-joint"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Precision Flexure Design</h3>
+                        <p>Designing compliant mechanisms for high-precision applications.</p>
+                        <div class="interactive-controls">
+                            <label for="deflection">Deflection (mm):</label>
+                            <input type="range" id="deflection" min="0" max="5" value="2" step="0.1">
+                            <span id="def-value">2.0 mm</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="loadFlexureArticle()">Read More</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
@@ -244,98 +336,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">Engineering Blog</h2>
-            <p class="section-subtitle">Interactive explanations of mechanical engineering concepts</p>
-            <div class="blog-grid">
-                <!-- Finite Element Analysis Blog -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="fea-animation">
-                            <canvas id="feaCanvas" width="300" height="200"></canvas>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Finite Element Analysis Fundamentals</h3>
-                        <p>Understanding the basics of FEA and its applications in mechanical engineering.</p>
-                        <div class="interactive-controls">
-                            <label for="mesh-density">Mesh Density:</label>
-                            <input type="range" id="mesh-density" min="1" max="10" value="5">
-                            <span id="mesh-value">5</span>
-                        </div>
-                        <button class="btn btn-primary" onclick="loadFEAArticle()">Read More</button>
-                    </div>
-                </article>
-
-                <!-- COMSOL Multiphysics Blog -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="comsol-animation">
-                            <div class="heat-flow"></div>
-                            <div class="temperature-gradient"></div>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>COMSOL Multiphysics Simulations</h3>
-                        <p>Exploring multiphysics simulations for thermal and structural analysis.</p>
-                        <div class="interactive-controls">
-                            <label for="temperature">Temperature (°C):</label>
-                            <input type="range" id="temperature" min="20" max="200" value="100">
-                            <span id="temp-value">100°C</span>
-                        </div>
-                        <button class="btn btn-primary" onclick="loadCOMSOLArticle()">Read More</button>
-                    </div>
-                </article>
-
-                <!-- Dynamics Blog -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="dynamics-animation">
-                            <div class="spring-mass-system">
-                                <div class="mass"></div>
-                                <div class="spring"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Dynamics & Vibration Analysis</h3>
-                        <p>Understanding spring-mass systems and vibration fundamentals.</p>
-                        <div class="interactive-controls">
-                            <label for="frequency">Frequency (Hz):</label>
-                            <input type="range" id="frequency" min="1" max="10" value="5">
-                            <span id="freq-value">5 Hz</span>
-                        </div>
-                        <button class="btn btn-primary" onclick="loadDynamicsArticle()">Read More</button>
-                    </div>
-                </article>
-
-                <!-- Flexure Design Blog -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="flexure-animation">
-                            <div class="flexure-beam">
-                                <div class="flexure-joint"></div>
-                                <div class="flexure-joint"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Precision Flexure Design</h3>
-                        <p>Designing compliant mechanisms for high-precision applications.</p>
-                        <div class="interactive-controls">
-                            <label for="deflection">Deflection (mm):</label>
-                            <input type="range" id="deflection" min="0" max="5" value="2" step="0.1">
-                            <span id="def-value">2.0 mm</span>
-                        </div>
-                        <button class="btn btn-primary" onclick="loadFlexureArticle()">Read More</button>
-                    </div>
-                </article>
             </div>
         </div>
     </section>

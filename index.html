@@ -172,38 +172,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog-content">
-                        <h3>Dynamics & Vibration Analysis</h3>
-                        <p>Interactive mass-spring-damper system simulation with real-time Bode plots and frequency response analysis.</p>
-                        <div class="interactive-controls">
-                            <div class="control-group">
-                                <label for="mass-slider">Mass (kg):</label>
-                                <input type="range" id="mass-slider" min="0.1" max="10" value="1" step="0.1">
-                                <span id="mass-value">1.0</span>
+                                            <div class="blog-content">
+                            <h3>Dynamics & Vibration Analysis</h3>
+                            <p>Understanding spring-mass systems and vibration fundamentals.</p>
+                            <div class="interactive-controls">
+                                <label for="frequency">Frequency (Hz):</label>
+                                <input type="range" id="frequency" min="1" max="10" value="5">
+                                <span id="freq-value">5 Hz</span>
                             </div>
-                            <div class="control-group">
-                                <label for="spring-slider">Spring Constant (N/m):</label>
-                                <input type="range" id="spring-slider" min="1" max="100" value="10" step="1">
-                                <span id="spring-value">10</span>
-                            </div>
-                            <div class="control-group">
-                                <label for="damping-slider">Damping (Ns/m):</label>
-                                <input type="range" id="damping-slider" min="0" max="20" value="1" step="0.1">
-                                <span id="damping-value">1.0</span>
-                            </div>
-                            <div class="control-group">
-                                <label for="force-slider">Force Amplitude (N):</label>
-                                <input type="range" id="force-slider" min="0" max="10" value="1" step="0.1">
-                                <span id="force-value">1.0</span>
-                            </div>
-                            <div class="control-group">
-                                <label for="freq-slider">Forcing Frequency (rad/s):</label>
-                                <input type="range" id="freq-slider" min="0.1" max="20" value="6.28" step="0.1">
-                                <span id="freq-value">6.28</span>
-                            </div>
+                            <button class="btn btn-primary" onclick="loadDynamicsArticle()">Read More</button>
                         </div>
-                        <button class="btn btn-primary" onclick="loadDynamicsArticle()">Launch Interactive Simulation</button>
-                    </div>
                 </article>
 
                 <!-- Flexure Design Blog -->

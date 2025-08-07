@@ -346,47 +346,101 @@ function loadCOMSOLArticle() {
 }
 
 function loadDynamicsArticle() {
-    const articleContent = `
-        <div class="article-modal">
-            <div class="article-content">
-                <h2>Dynamics & Vibration Analysis</h2>
-                <p>Dynamics analysis studies the motion of mechanical systems under the influence of forces, while vibration analysis focuses on oscillatory motion.</p>
+    const content = `
+        <div class="article-content">
+            <h2>Mass-Spring-Damper System Analysis</h2>
+            <p>This interactive simulation demonstrates the fundamental principles of vibration analysis and dynamics. The mass-spring-damper system is one of the most important models in mechanical engineering, used to understand vibration, resonance, and dynamic response.</p>
+            
+            <h3>System Parameters</h3>
+            <ul>
+                <li><strong>Mass (m):</strong> The inertial element that stores kinetic energy</li>
+                <li><strong>Spring Constant (k):</strong> The stiffness that stores potential energy</li>
+                <li><strong>Damping Coefficient (c):</strong> The energy dissipation mechanism</li>
+                <li><strong>Force Amplitude (F₀):</strong> The magnitude of the external forcing</li>
+                <li><strong>Forcing Frequency (ω):</strong> The frequency of the external excitation</li>
+            </ul>
+            
+            <h3>Mathematical Model</h3>
+            <div style="text-align: center; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; font-family: 'Courier New', monospace;">
+                mẍ + cẋ + kx = F₀sin(ωt)
+            </div>
+            
+            <h3>Frequency Response</h3>
+            <div style="text-align: center; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; font-family: 'Courier New', monospace;">
+                H(ω) = 1 / (-mω² + jcω + k)
+            </div>
+            <p>This creates a frequency response with:</p>
+            <ul>
+                <li><strong>Natural Frequency:</strong> ωₙ = √(k/m)</li>
+                <li><strong>Damping Ratio:</strong> ζ = c/(2√(mk))</li>
+                <li><strong>Resonance:</strong> Peak response when ω ≈ ωₙ</li>
+            </ul>
+            
+            <h3>Interactive Simulation</h3>
+            <p>Use the sliders below to explore how different parameters affect the system response:</p>
+            
+            <div class="interactive-demo">
+                <div class="demo-controls">
+                    <label>Mass (kg): <input type="range" id="demo-mass" min="0.1" max="10" value="1" step="0.1"></label>
+                    <span id="demo-mass-val">1.0</span>
+                </div>
+                <div class="demo-controls">
+                    <label>Spring Constant (N/m): <input type="range" id="demo-spring" min="1" max="100" value="10" step="1"></label>
+                    <span id="demo-spring-val">10</span>
+                </div>
+                <div class="demo-controls">
+                    <label>Damping (Ns/m): <input type="range" id="demo-damping" min="0" max="20" value="1" step="0.1"></label>
+                    <span id="demo-damping-val">1.0</span>
+                </div>
+                <div class="demo-controls">
+                    <label>Force Amplitude (N): <input type="range" id="demo-force" min="0" max="10" value="1" step="0.1"></label>
+                    <span id="demo-force-val">1.0</span>
+                </div>
+                <div class="demo-controls">
+                    <label>Frequency (rad/s): <input type="range" id="demo-freq" min="0.1" max="20" value="6.28" step="0.1"></label>
+                    <span id="demo-freq-val">6.28</span>
+                </div>
                 
-                <h3>Fundamental Concepts:</h3>
-                <ul>
-                    <li><strong>Natural Frequency:</strong> The frequency at which a system naturally vibrates</li>
-                    <li><strong>Damping:</strong> Energy dissipation that reduces vibration amplitude</li>
-                    <li><strong>Mode Shapes:</strong> The pattern of vibration at each natural frequency</li>
-                    <li><strong>Resonance:</strong> Amplified response when forcing frequency matches natural frequency</li>
-                </ul>
+                <div style="margin-top: 2rem;">
+                    <canvas id="dynamics-canvas" width="800" height="400" style="border: 1px solid #e5e7eb; border-radius: 8px; background: white;"></canvas>
+                </div>
                 
-                <h3>Analysis Types:</h3>
-                <ul>
-                    <li>Modal analysis for natural frequencies</li>
-                    <li>Harmonic analysis for steady-state response</li>
-                    <li>Transient analysis for time-domain response</li>
-                    <li>Random vibration analysis for stochastic loading</li>
-                </ul>
-                
-                <div class="interactive-demo">
-                    <h4>Spring-Mass System Demo</h4>
-                    <p>Adjust the frequency to see how it affects the system response:</p>
-                    <div class="demo-controls">
-                        <label>Frequency: <span id="demo-freq-value">5 Hz</span></label>
-                        <input type="range" id="demo-freq-slider" min="1" max="20" value="5">
+                <div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <h4>Time Domain Response</h4>
+                        <canvas id="time-canvas" width="350" height="200" style="border: 1px solid #e5e7eb; border-radius: 4px; background: white;"></canvas>
                     </div>
-                    <div class="dynamics-visualization">
-                        <div class="spring-mass-demo">
-                            <div class="demo-spring"></div>
-                            <div class="demo-mass"></div>
-                        </div>
+                    <div>
+                        <h4>Frequency Response</h4>
+                        <canvas id="freq-canvas" width="350" height="200" style="border: 1px solid #e5e7eb; border-radius: 4px; background: white;"></canvas>
                     </div>
                 </div>
             </div>
+            
+            <h3>Key Observations</h3>
+            <ul>
+                <li>When damping is low, the system shows strong resonance near the natural frequency</li>
+                <li>Higher mass reduces the natural frequency and makes the system more sluggish</li>
+                <li>Stiffer springs increase natural frequency and reduce displacement</li>
+                <li>Damping reduces peak response and broadens the frequency response</li>
+            </ul>
+            
+            <h3>Engineering Applications</h3>
+            <ul>
+                <li>Vibration isolation systems for sensitive equipment</li>
+                <li>Shock absorbers in automotive and aerospace applications</li>
+                <li>Structural dynamics analysis for buildings and bridges</li>
+                <li>Control system design for precision positioning</li>
+            </ul>
         </div>
     `;
     
-    showModal(articleContent);
+    showModal(content);
+    
+    // Initialize the interactive simulation after modal is shown
+    setTimeout(() => {
+        initDynamicsSimulation();
+    }, 100);
 }
 
 function loadFlexureArticle() {
@@ -674,110 +728,8 @@ function initMassSpringSimulation() {
     updateSliderValues();
 }
 
-// Enhanced Dynamics Article with Interactive Simulation
-function loadDynamicsArticle() {
-    const content = `
-        <div class="article-content">
-            <h2>Mass-Spring-Damper System Analysis</h2>
-            <p>This interactive simulation demonstrates the fundamental principles of vibration analysis and dynamics. The mass-spring-damper system is one of the most important models in mechanical engineering, used to understand vibration, resonance, and dynamic response.</p>
-            
-            <h3>System Parameters</h3>
-            <p>The system is characterized by five key parameters:</p>
-            <ul>
-                <li><strong>Mass (m):</strong> The inertial element that stores kinetic energy</li>
-                <li><strong>Spring Constant (k):</strong> The elastic element that stores potential energy</li>
-                <li><strong>Damping Coefficient (c):</strong> The dissipative element that removes energy</li>
-                <li><strong>Force Amplitude (F₀):</strong> The magnitude of the external forcing function</li>
-                <li><strong>Forcing Frequency (ω):</strong> The frequency of the external excitation</li>
-            </ul>
 
-            <h3>Mathematical Model</h3>
-            <p>The system is governed by the second-order differential equation:</p>
-            <div style="text-align: center; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; font-family: 'Courier New', monospace;">
-                mẍ + cẋ + kx = F₀sin(ωt)
-            </div>
-            
-            <h3>Frequency Response</h3>
-            <p>The transfer function of the system is:</p>
-            <div style="text-align: center; margin: 1rem 0; padding: 1rem; background: #f8fafc; border-radius: 8px; font-family: 'Courier New', monospace;">
-                H(ω) = 1 / (-mω² + jcω + k)
-            </div>
-            
-            <p>This creates a frequency response with:</p>
-            <ul>
-                <li><strong>Resonance Peak:</strong> Maximum response at natural frequency ωₙ = √(k/m)</li>
-                <li><strong>Phase Lag:</strong> Response lags behind input, especially near resonance</li>
-                <li><strong>Damping Effect:</strong> Higher damping reduces peak amplitude and broadens the response</li>
-            </ul>
 
-            <h3>Interactive Simulation</h3>
-            <p>Use the sliders below to explore how different parameters affect the system response:</p>
-            
-            <div class="interactive-demo">
-                <div class="demo-controls">
-                    <label>Mass (kg): <input type="range" id="demo-mass" min="0.1" max="10" value="1" step="0.1"></label>
-                    <span id="demo-mass-val">1.0</span>
-                </div>
-                <div class="demo-controls">
-                    <label>Spring Constant (N/m): <input type="range" id="demo-spring" min="1" max="100" value="10" step="1"></label>
-                    <span id="demo-spring-val">10</span>
-                </div>
-                <div class="demo-controls">
-                    <label>Damping (Ns/m): <input type="range" id="demo-damping" min="0" max="20" value="1" step="0.1"></label>
-                    <span id="demo-damping-val">1.0</span>
-                </div>
-                <div class="demo-controls">
-                    <label>Force Amplitude (N): <input type="range" id="demo-force" min="0" max="10" value="1" step="0.1"></label>
-                    <span id="demo-force-val">1.0</span>
-                </div>
-                <div class="demo-controls">
-                    <label>Frequency (rad/s): <input type="range" id="demo-freq" min="0.1" max="20" value="6.28" step="0.1"></label>
-                    <span id="demo-freq-val">6.28</span>
-                </div>
-                
-                <div style="margin-top: 2rem;">
-                    <canvas id="dynamics-canvas" width="800" height="400" style="border: 1px solid #e5e7eb; border-radius: 8px; background: white;"></canvas>
-                </div>
-                
-                <div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                    <div>
-                        <h4>Time Domain Response</h4>
-                        <canvas id="time-canvas" width="350" height="200" style="border: 1px solid #e5e7eb; border-radius: 4px; background: white;"></canvas>
-                    </div>
-                    <div>
-                        <h4>Frequency Response</h4>
-                        <canvas id="freq-canvas" width="350" height="200" style="border: 1px solid #e5e7eb; border-radius: 4px; background: white;"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Key Observations</h3>
-            <ul>
-                <li><strong>Resonance:</strong> When the forcing frequency approaches the natural frequency, the response amplitude increases dramatically</li>
-                <li><strong>Damping Control:</strong> Higher damping reduces the resonance peak but increases the response at other frequencies</li>
-                <li><strong>Phase Relationship:</strong> At resonance, the response lags the input by 90 degrees</li>
-                <li><strong>Energy Transfer:</strong> The system efficiently transfers energy from the input to the output at resonance</li>
-            </ul>
-
-            <h3>Engineering Applications</h3>
-            <p>This analysis is fundamental to many engineering applications:</p>
-            <ul>
-                <li><strong>Vibration Isolation:</strong> Designing systems to minimize unwanted vibrations</li>
-                <li><strong>Structural Dynamics:</strong> Understanding building and bridge responses to earthquakes</li>
-                <li><strong>Automotive Suspension:</strong> Optimizing ride comfort and handling</li>
-                <li><strong>Machine Design:</strong> Preventing resonance in rotating machinery</li>
-                <li><strong>Sensor Design:</strong> Maximizing sensitivity in measurement systems</li>
-            </ul>
-        </div>
-    `;
-    
-    showModal(content);
-    
-    // Initialize the interactive simulation after modal is shown
-    setTimeout(() => {
-        initDynamicsSimulation();
-    }, 100);
-}
 
 // Initialize the mass-spring simulation
 function initDynamicsSimulation() {

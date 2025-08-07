@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoor - Mechanical Engineer at ASML</title>
+    <meta name="description" content="Mechanical Engineer specializing in FEA, COMSOL Multiphysics, dynamics, and flexure design at ASML">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Apoor</h2>
+                <span>Mechanical Engineer</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Mechanical Engineer
+                    <span class="highlight">at ASML</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Specializing in Finite Element Analysis, COMSOL Multiphysics, 
+                    Dynamics, and Precision Flexure Design
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Learn More</a>
+                    <a href="#blog" class="btn btn-secondary">Read Blog</a>
+                </div>
+            </div>
+            <div class="engineering-animation">
+                <div class="gear-system">
+                    <div class="gear gear-1"></div>
+                    <div class="gear gear-2"></div>
+                    <div class="gear gear-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a passionate mechanical engineer working at ASML, where I contribute to 
+                        the development of cutting-edge semiconductor manufacturing equipment. My expertise 
+                        lies in creating sophisticated finite element models and conducting comprehensive 
+                        simulations using COMSOL Multiphysics.
+                    </p>
+                    <p>
+                        With a strong foundation in dynamics and vibration analysis, I specialize in 
+                        precision flexure design for high-precision applications. My work involves 
+                        solving complex engineering challenges through advanced simulation techniques 
+                        and innovative design solutions.
+                    </p>
+                    <div class="skills">
+                        <div class="skill-category">
+                            <h3>Simulation & Analysis</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Finite Element Analysis</span>
+                                <span class="skill-tag">COMSOL Multiphysics</span>
+                                <span class="skill-tag">Thermal Analysis</span>
+                                <span class="skill-tag">Structural Analysis</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Design & Engineering</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Flexure Design</span>
+                                <span class="skill-tag">Precision Engineering</span>
+                                <span class="skill-tag">Dynamics & Vibration</span>
+                                <span class="skill-tag">Mechanical Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Mechanical Engineer</h3>
+                        <h4>ASML</h4>
+                        <p class="timeline-date">2023 - Present</p>
+                        <ul>
+                            <li>Develop finite element models for semiconductor manufacturing equipment</li>
+                            <li>Conduct thermal and structural analysis using COMSOL Multiphysics</li>
+                            <li>Design precision flexure systems for high-precision applications</li>
+                            <li>Perform dynamics and vibration analysis for critical components</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Previous Experience</h3>
+                        <h4>Various Engineering Roles</h4>
+                        <p class="timeline-date">Before 2023</p>
+                        <ul>
+                            <li>Gained expertise in mechanical design and analysis</li>
+                            <li>Developed skills in simulation and modeling</li>
+                            <li>Worked on precision engineering projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Engineering Blog</h2>
+            <p class="section-subtitle">Interactive explanations of mechanical engineering concepts</p>
+            <div class="blog-grid">
+                <!-- Finite Element Analysis Blog -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="fea-animation">
+                            <canvas id="feaCanvas" width="300" height="200"></canvas>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Finite Element Analysis Fundamentals</h3>
+                        <p>Understanding the basics of FEA and its applications in mechanical engineering.</p>
+                        <div class="interactive-controls">
+                            <label for="mesh-density">Mesh Density:</label>
+                            <input type="range" id="mesh-density" min="1" max="10" value="5">
+                            <span id="mesh-value">5</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="loadFEAArticle()">Read More</button>
+                    </div>
+                </article>
+
+                <!-- COMSOL Multiphysics Blog -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="comsol-animation">
+                            <div class="heat-flow"></div>
+                            <div class="temperature-gradient"></div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>COMSOL Multiphysics Simulations</h3>
+                        <p>Exploring multiphysics simulations for thermal and structural analysis.</p>
+                        <div class="interactive-controls">
+                            <label for="temperature">Temperature (°C):</label>
+                            <input type="range" id="temperature" min="20" max="200" value="100">
+                            <span id="temp-value">100°C</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="loadCOMSOLArticle()">Read More</button>
+                    </div>
+                </article>
+
+                <!-- Dynamics Blog -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="dynamics-animation">
+                            <div class="spring-mass-system">
+                                <div class="mass"></div>
+                                <div class="spring"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Dynamics & Vibration Analysis</h3>
+                        <p>Understanding spring-mass systems and vibration fundamentals.</p>
+                        <div class="interactive-controls">
+                            <label for="frequency">Frequency (Hz):</label>
+                            <input type="range" id="frequency" min="1" max="10" value="5">
+                            <span id="freq-value">5 Hz</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="loadDynamicsArticle()">Read More</button>
+                    </div>
+                </article>
+
+                <!-- Flexure Design Blog -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="flexure-animation">
+                            <div class="flexure-beam">
+                                <div class="flexure-joint"></div>
+                                <div class="flexure-joint"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Precision Flexure Design</h3>
+                        <p>Designing compliant mechanisms for high-precision applications.</p>
+                        <div class="interactive-controls">
+                            <label for="deflection">Deflection (mm):</label>
+                            <input type="range" id="deflection" min="0" max="5" value="2" step="0.1">
+                            <span id="def-value">2.0 mm</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="loadFlexureArticle()">Read More</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing mechanical engineering challenges, 
+                    simulation techniques, and innovative design solutions.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>apoor@example.com</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/apoor</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/apoor</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Apoor</h3>
+                    <p>Mechanical Engineer at ASML</p>
+                    <p>Specializing in FEA, COMSOL, Dynamics, and Flexure Design</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Expertise</h4>
+                    <ul>
+                        <li>Finite Element Analysis</li>
+                        <li>COMSOL Multiphysics</li>
+                        <li>Dynamics & Vibration</li>
+                        <li>Flexure Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Apoor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Blog Articles -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMSOL Multiphysics - Apoorv's Engineering Blog</title>
+    <meta name="description" content="Explore COMSOL Multiphysics simulations, thermal analysis, and multiphysics coupling in engineering applications">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Apoorv</h2>
+                <span>Mechanical Engineer</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#blog" class="nav-link">Blog</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Article -->
+    <section class="blog-article">
+        <div class="container">
+            <div class="article-header">
+                <a href="index.html#blog" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Blog
+                </a>
+                <h1>COMSOL Multiphysics Simulations</h1>
+                <p class="article-meta">Published on December 2024 • 10 min read</p>
+            </div>
+            
+            <div class="article-content">
+                <p>COMSOL Multiphysics is a powerful simulation software that enables engineers to solve complex multiphysics problems by coupling different physical phenomena. This capability makes it invaluable for modern engineering design and analysis.</p>
+                
+                <h2>Multiphysics Coupling</h2>
+                <ul>
+                    <li><strong>Thermal-Structural:</strong> Temperature changes causing structural deformation</li>
+                    <li><strong>Fluid-Structure:</strong> Fluid flow interacting with solid structures</li>
+                    <li><strong>Electromagnetic:</strong> Electric and magnetic field interactions</li>
+                    <li><strong>Acoustic-Structural:</strong> Sound waves and structural vibrations</li>
+                </ul>
+                
+                <h2>Advanced Features</h2>
+                <ul>
+                    <li>Automatic mesh generation and refinement</li>
+                    <li>Parametric studies and optimization</li>
+                    <li>Real-time visualization and post-processing</li>
+                    <li>CAD integration and geometry import</li>
+                </ul>
+                
+                <div class="interactive-demo">
+                    <h3>Thermal Analysis Demo</h3>
+                    <p>Adjust the temperature to see how it affects the heat distribution:</p>
+                    <div class="demo-controls">
+                        <label>Temperature: <span id="demo-temp-value">50°C</span></label>
+                        <input type="range" id="demo-temp-slider" min="20" max="100" value="50">
+                    </div>
+                    <div class="thermal-visualization">
+                        <canvas id="thermalCanvas" width="600" height="400"></canvas>
+                    </div>
+                </div>
+
+                <h2>Applications in Semiconductor Manufacturing</h2>
+                <p>At ASML, COMSOL is extensively used for:</p>
+                <ul>
+                    <li><strong>Thermal Management:</strong> Analyzing heat dissipation in optical components</li>
+                    <li><strong>Structural Analysis:</strong> Evaluating stress in precision mechanisms</li>
+                    <li><strong>Electromagnetic Simulation:</strong> Modeling magnetic fields in actuators</li>
+                    <li><strong>Fluid Dynamics:</strong> Optimizing cooling systems and air flow</li>
+                </ul>
+
+                <h2>Simulation Workflow</h2>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <h4>1. Geometry Creation</h4>
+                        <p>Import CAD models or create geometry directly in COMSOL</p>
+                    </div>
+                    <div class="workflow-step">
+                        <h4>2. Physics Selection</h4>
+                        <p>Choose appropriate physics modules and coupling</p>
+                    </div>
+                    <div class="workflow-step">
+                        <h4>3. Material Properties</h4>
+                        <p>Define material properties and boundary conditions</p>
+                    </div>
+                    <div class="workflow-step">
+                        <h4>4. Mesh Generation</h4>
+                        <p>Create appropriate mesh for accurate results</p>
+                    </div>
+                    <div class="workflow-step">
+                        <h4>5. Solver Setup</h4>
+                        <p>Configure solver parameters and convergence criteria</p>
+                    </div>
+                    <div class="workflow-step">
+                        <h4>6. Results Analysis</h4>
+                        <p>Post-process and validate simulation results</p>
+                    </div>
+                </div>
+
+                <h2>Best Practices</h2>
+                <ol>
+                    <li>Start with simplified models and gradually add complexity</li>
+                    <li>Use appropriate mesh refinement in critical regions</li>
+                    <li>Validate results with analytical solutions or experiments</li>
+                    <li>Document all assumptions and boundary conditions</li>
+                    <li>Perform sensitivity analysis on key parameters</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Apoorv</h3>
+                    <p>Mechanical Engineer at ASML</p>
+                    <p>Specializing in FEA, COMSOL, Dynamics, and Flexure Design</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#experience">Experience</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Expertise</h4>
+                    <ul>
+                        <li>Finite Element Analysis</li>
+                        <li>COMSOL Multiphysics</li>
+                        <li>Dynamics & Vibration</li>
+                        <li>Flexure Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Apoorv. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Thermal Analysis Demo
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('thermalCanvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const tempSlider = document.getElementById('demo-temp-slider');
+            const tempValue = document.getElementById('demo-temp-value');
+
+            let temperature = 50;
+            let animationId;
+
+            function drawThermalAnalysis() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw heat source (center)
+                const centerX = canvas.width / 2;
+                const centerY = canvas.height / 2;
+                
+                // Create temperature gradient
+                const maxRadius = Math.min(canvas.width, canvas.height) / 2 - 20;
+                
+                for (let x = 0; x < canvas.width; x += 5) {
+                    for (let y = 0; y < canvas.height; y += 5) {
+                        const distance = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2);
+                        const normalizedDistance = Math.min(distance / maxRadius, 1);
+                        
+                        // Temperature decreases with distance
+                        const localTemp = temperature * Math.exp(-normalizedDistance * 2);
+                        const normalizedTemp = (localTemp - 20) / 80; // Normalize to 0-1
+                        
+                        // Color based on temperature
+                        const red = Math.min(255, 255 * normalizedTemp);
+                        const blue = Math.max(0, 255 * (1 - normalizedTemp));
+                        
+                        ctx.fillStyle = `rgb(${red}, 0, ${blue})`;
+                        ctx.fillRect(x, y, 5, 5);
+                    }
+                }
+                
+                // Draw heat source
+                ctx.fillStyle = '#ff4444';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 15, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                // Draw temperature contours
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+                ctx.lineWidth = 1;
+                
+                for (let i = 1; i <= 5; i++) {
+                    const radius = (maxRadius * i) / 5;
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+                    ctx.stroke();
+                }
+                
+                // Add labels
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '16px Arial';
+                ctx.fillText(`${temperature}°C`, centerX - 20, centerY + 5);
+                
+                animationId = requestAnimationFrame(drawThermalAnalysis);
+            }
+
+            // Update temperature
+            if (tempSlider && tempValue) {
+                tempSlider.addEventListener('input', (e) => {
+                    temperature = parseInt(e.target.value);
+                    tempValue.textContent = `${temperature}°C`;
+                });
+            }
+
+            // Start animation
+            drawThermalAnalysis();
+        });
+    </script>
+</body>
+</html>

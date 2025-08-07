@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Flexure Design - Apoorv's Engineering Blog</title>
+    <meta name="description" content="Learn about precision flexure design, compliant mechanisms, and applications in high-precision engineering">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Apoorv</h2>
+                <span>Mechanical Engineer</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#blog" class="nav-link">Blog</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Article -->
+    <section class="blog-article">
+        <div class="container">
+            <div class="article-header">
+                <a href="index.html#blog" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Blog
+                </a>
+                <h1>Precision Flexure Design</h1>
+                <p class="article-meta">Published on December 2024 • 9 min read</p>
+            </div>
+            
+            <div class="article-content">
+                <p>Flexure mechanisms are compliant mechanisms that provide motion through elastic deformation, offering high precision and repeatability without friction or backlash. These mechanisms are essential in applications requiring nanometer-level precision.</p>
+                
+                <h2>Design Principles</h2>
+                <ul>
+                    <li><strong>Compliance:</strong> Controlled flexibility in desired directions</li>
+                    <li><strong>Stiffness:</strong> Resistance to unwanted deformations</li>
+                    <li><strong>Stress Concentration:</strong> Managing high stress areas at fillets</li>
+                    <li><strong>Kinematic Design:</strong> Constraining degrees of freedom</li>
+                </ul>
+                
+                <h2>Applications</h2>
+                <ul>
+                    <li>Precision positioning stages</li>
+                    <li>Micro-manipulation systems</li>
+                    <li>Optical alignment mechanisms</li>
+                    <li>Vibration isolation systems</li>
+                </ul>
+                
+                <div class="interactive-demo">
+                    <h3>Flexure Stiffness Demo</h3>
+                    <p>Adjust the stiffness to see how it affects the flexure deflection:</p>
+                    <div class="demo-controls">
+                        <label>Stiffness: <span id="demo-stiffness-value">5</span></label>
+                        <input type="range" id="demo-stiffness-slider" min="1" max="10" value="5">
+                    </div>
+                    <div class="flexure-visualization">
+                        <canvas id="flexureCanvas" width="600" height="400"></canvas>
+                    </div>
+                </div>
+
+                <h2>Types of Flexure Mechanisms</h2>
+                <div class="flexure-types">
+                    <div class="flexure-type">
+                        <h4>Parallel Flexure</h4>
+                        <p>Provides pure translational motion with high stiffness in other directions</p>
+                    </div>
+                    <div class="flexure-type">
+                        <h4>Cross Flexure</h4>
+                        <p>Offers rotational motion with controlled pivot point</p>
+                    </div>
+                    <div class="flexure-type">
+                        <h4>Leaf Spring</h4>
+                        <p>Simple and effective for linear motion guidance</p>
+                    </div>
+                    <div class="flexure-type">
+                        <h4>Notch Flexure</h4>
+                        <p>Provides large motion range with good stress distribution</p>
+                    </div>
+                </div>
+
+                <h2>Design Considerations</h2>
+                <div class="design-considerations">
+                    <div class="consideration">
+                        <h4>Material Selection</h4>
+                        <p>Choose materials with high yield strength and good fatigue properties</p>
+                    </div>
+                    <div class="consideration">
+                        <h4>Stress Analysis</h4>
+                        <p>Ensure maximum stress is well below material yield strength</p>
+                    </div>
+                    <div class="consideration">
+                        <h4>Fatigue Life</h4>
+                        <p>Consider cyclic loading and design for infinite fatigue life</p>
+                    </div>
+                    <div class="consideration">
+                        <h4>Manufacturing</h4>
+                        <p>Design for manufacturability using precision machining or EDM</p>
+                    </div>
+                </div>
+
+                <h2>Analysis Methods</h2>
+                <ul>
+                    <li><strong>Analytical:</strong> Beam theory and Castigliano's theorem</li>
+                    <li><strong>FEA:</strong> Finite element analysis for complex geometries</li>
+                    <li><strong>Experimental:</strong> Prototype testing and validation</li>
+                    <li><strong>Optimization:</strong> Parameter studies for optimal performance</li>
+                </ul>
+
+                <h2>Best Practices</h2>
+                <ol>
+                    <li>Use appropriate fillet radii to reduce stress concentration</li>
+                    <li>Design for symmetric loading when possible</li>
+                    <li>Consider thermal effects on material properties</li>
+                    <li>Account for manufacturing tolerances in design</li>
+                    <li>Validate designs through prototyping and testing</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Apoorv</h3>
+                    <p>Mechanical Engineer at ASML</p>
+                    <p>Specializing in FEA, COMSOL, Dynamics, and Flexure Design</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#experience">Experience</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Expertise</h4>
+                    <ul>
+                        <li>Finite Element Analysis</li>
+                        <li>COMSOL Multiphysics</li>
+                        <li>Dynamics & Vibration</li>
+                        <li>Flexure Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Apoorv. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Flexure Design Demo
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('flexureCanvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const stiffnessSlider = document.getElementById('demo-stiffness-slider');
+            const stiffnessValue = document.getElementById('demo-stiffness-value');
+
+            let stiffness = 5;
+            let animationId;
+
+            function drawFlexure() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw base
+                ctx.fillStyle = '#374151';
+                ctx.fillRect(50, 300, 500, 20);
+                
+                // Calculate deflection based on stiffness
+                const maxDeflection = 100 - (stiffness - 1) * 8; // Higher stiffness = less deflection
+                const time = Date.now() * 0.001;
+                const deflection = maxDeflection * Math.sin(time * 2);
+                
+                // Draw flexure arms
+                ctx.strokeStyle = '#2563eb';
+                ctx.lineWidth = 3;
+                
+                // Left arm
+                ctx.beginPath();
+                ctx.moveTo(100, 300);
+                ctx.lineTo(150, 300 - deflection);
+                ctx.stroke();
+                
+                // Right arm
+                ctx.beginPath();
+                ctx.moveTo(500, 300);
+                ctx.lineTo(450, 300 - deflection);
+                ctx.stroke();
+                
+                // Draw moving platform
+                ctx.fillStyle = '#dc2626';
+                ctx.fillRect(150, 300 - deflection - 30, 300, 30);
+                
+                // Draw joints
+                ctx.fillStyle = '#059669';
+                ctx.beginPath();
+                ctx.arc(100, 300, 8, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(500, 300, 8, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                // Draw force arrow
+                ctx.strokeStyle = '#f59e0b';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(300, 300 - deflection - 50);
+                ctx.lineTo(300, 300 - deflection - 80);
+                ctx.stroke();
+                
+                // Arrow head
+                ctx.beginPath();
+                ctx.moveTo(300, 300 - deflection - 80);
+                ctx.lineTo(295, 300 - deflection - 75);
+                ctx.lineTo(305, 300 - deflection - 75);
+                ctx.fill();
+                
+                // Add labels
+                ctx.fillStyle = '#374151';
+                ctx.font = '14px Arial';
+                ctx.fillText(`Stiffness: ${stiffness}`, 10, 30);
+                ctx.fillText(`Deflection: ${Math.abs(deflection).toFixed(1)} mm`, 10, 50);
+                
+                animationId = requestAnimationFrame(drawFlexure);
+            }
+
+            // Update stiffness
+            if (stiffnessSlider && stiffnessValue) {
+                stiffnessSlider.addEventListener('input', (e) => {
+                    stiffness = parseInt(e.target.value);
+                    stiffnessValue.textContent = stiffness;
+                });
+            }
+
+            // Start animation
+            drawFlexure();
+        });
+    </script>
+</body>
+</html>

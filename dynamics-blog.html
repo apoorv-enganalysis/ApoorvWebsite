@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamics & Vibration Analysis - Apoorv's Engineering Blog</title>
+    <meta name="description" content="Interactive mass-spring-damper system simulation with real-time Bode plots and frequency response analysis">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Apoorv</h2>
+                <span>Mechanical Engineer</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#blog" class="nav-link">Blog</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Article -->
+    <section class="blog-article">
+        <div class="container">
+            <div class="article-header">
+                <a href="index.html#blog" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Blog
+                </a>
+                <h1>Mass-Spring-Damper System Analysis</h1>
+                <p class="article-meta">Published on December 2024 • 12 min read</p>
+            </div>
+            
+            <div class="article-content">
+                <p>This interactive simulation demonstrates the fundamental principles of vibration analysis and dynamics. The mass-spring-damper system is one of the most important models in mechanical engineering, used to understand vibration, resonance, and dynamic response.</p>
+                
+                <h2>System Parameters</h2>
+                <ul>
+                    <li><strong>Mass (m):</strong> The inertial element that stores kinetic energy</li>
+                    <li><strong>Spring Constant (k):</strong> The stiffness that stores potential energy</li>
+                    <li><strong>Damping Coefficient (c):</strong> The energy dissipation mechanism</li>
+                    <li><strong>Force Amplitude (F₀):</strong> The magnitude of the external forcing</li>
+                    <li><strong>Forcing Frequency (ω):</strong> The frequency of the external excitation</li>
+                </ul>
+                
+                <h2>Mathematical Model</h2>
+                <div class="equation-box">
+                    <p>The system is governed by the second-order differential equation:</p>
+                    <div class="equation">mẍ + cẋ + kx = F₀sin(ωt)</div>
+                </div>
+                
+                <h2>Frequency Response</h2>
+                <div class="equation-box">
+                    <p>The transfer function of the system is:</p>
+                    <div class="equation">H(ω) = 1 / (-mω² + jcω + k)</div>
+                </div>
+                <p>This creates a frequency response with:</p>
+                <ul>
+                    <li><strong>Natural Frequency:</strong> ωₙ = √(k/m)</li>
+                    <li><strong>Damping Ratio:</strong> ζ = c/(2√(mk))</li>
+                    <li><strong>Resonance:</strong> Peak response when ω ≈ ωₙ</li>
+                </ul>
+                
+                <div class="interactive-demo">
+                    <h3>Interactive Simulation</h3>
+                    <p>Use the sliders below to explore how different parameters affect the system response:</p>
+                    
+                    <div class="demo-controls">
+                        <label>Mass (kg): <input type="range" id="demo-mass" min="0.1" max="10" value="1" step="0.1"></label>
+                        <span id="demo-mass-val">1.0</span>
+                    </div>
+                    <div class="demo-controls">
+                        <label>Spring Constant (N/m): <input type="range" id="demo-spring" min="1" max="100" value="10" step="1"></label>
+                        <span id="demo-spring-val">10</span>
+                    </div>
+                    <div class="demo-controls">
+                        <label>Damping (Ns/m): <input type="range" id="demo-damping" min="0" max="20" value="1" step="0.1"></label>
+                        <span id="demo-damping-val">1.0</span>
+                    </div>
+                    <div class="demo-controls">
+                        <label>Force Amplitude (N): <input type="range" id="demo-force" min="0" max="10" value="1" step="0.1"></label>
+                        <span id="demo-force-val">1.0</span>
+                    </div>
+                    <div class="demo-controls">
+                        <label>Frequency (rad/s): <input type="range" id="demo-freq" min="0.1" max="20" value="6.28" step="0.1"></label>
+                        <span id="demo-freq-val">6.28</span>
+                    </div>
+                    
+                    <div class="simulation-container">
+                        <canvas id="dynamics-canvas" width="800" height="400"></canvas>
+                    </div>
+                    
+                    <div class="plot-container">
+                        <div class="plot">
+                            <h4>Time Domain Response</h4>
+                            <canvas id="time-canvas" width="350" height="200"></canvas>
+                        </div>
+                        <div class="plot">
+                            <h4>Frequency Response</h4>
+                            <canvas id="freq-canvas" width="350" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Key Observations</h2>
+                <ul>
+                    <li>When damping is low, the system shows strong resonance near the natural frequency</li>
+                    <li>Higher mass reduces the natural frequency and makes the system more sluggish</li>
+                    <li>Stiffer springs increase natural frequency and reduce displacement</li>
+                    <li>Damping reduces peak response and broadens the frequency response</li>
+                </ul>
+                
+                <h2>Engineering Applications</h2>
+                <ul>
+                    <li>Vibration isolation systems for sensitive equipment</li>
+                    <li>Shock absorbers in automotive and aerospace applications</li>
+                    <li>Structural dynamics analysis for buildings and bridges</li>
+                    <li>Control system design for precision positioning</li>
+                </ul>
+
+                <h2>Analysis Methods</h2>
+                <div class="analysis-methods">
+                    <div class="method-card">
+                        <h4>Modal Analysis</h4>
+                        <p>Determines natural frequencies and mode shapes</p>
+                    </div>
+                    <div class="method-card">
+                        <h4>Harmonic Analysis</h4>
+                        <p>Studies steady-state response to periodic excitation</p>
+                    </div>
+                    <div class="method-card">
+                        <h4>Transient Analysis</h4>
+                        <p>Analyzes time-domain response to arbitrary loading</p>
+                    </div>
+                    <div class="method-card">
+                        <h4>Random Vibration</h4>
+                        <p>Evaluates response to stochastic excitation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Apoorv</h3>
+                    <p>Mechanical Engineer at ASML</p>
+                    <p>Specializing in FEA, COMSOL, Dynamics, and Flexure Design</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#experience">Experience</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Expertise</h4>
+                    <ul>
+                        <li>Finite Element Analysis</li>
+                        <li>COMSOL Multiphysics</li>
+                        <li>Dynamics & Vibration</li>
+                        <li>Flexure Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Apoorv. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mass-Spring-Damper Simulation
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('dynamics-canvas');
+            const timeCanvas = document.getElementById('time-canvas');
+            const freqCanvas = document.getElementById('freq-canvas');
+            
+            if (!canvas || !timeCanvas || !freqCanvas) return;
+            
+            const ctx = canvas.getContext('2d');
+            const timeCtx = timeCanvas.getContext('2d');
+            const freqCtx = freqCanvas.getContext('2d');
+            
+            // System parameters
+            let m = 1, k = 10, c = 1, F0 = 1, w_force = 6.28;
+            let t = 0;
+            let animationId;
+            
+            // Get demo sliders
+            const massSlider = document.getElementById('demo-mass');
+            const springSlider = document.getElementById('demo-spring');
+            const dampingSlider = document.getElementById('demo-damping');
+            const forceSlider = document.getElementById('demo-force');
+            const freqSlider = document.getElementById('demo-freq');
+            
+            // Get value displays
+            const massVal = document.getElementById('demo-mass-val');
+            const springVal = document.getElementById('demo-spring-val');
+            const dampingVal = document.getElementById('demo-damping-val');
+            const forceVal = document.getElementById('demo-force-val');
+            const freqVal = document.getElementById('demo-freq-val');
+            
+            // Update slider values
+            function updateValues() {
+                if (massVal) massVal.textContent = m.toFixed(1);
+                if (springVal) springVal.textContent = k.toFixed(0);
+                if (dampingVal) dampingVal.textContent = c.toFixed(1);
+                if (forceVal) forceVal.textContent = F0.toFixed(1);
+                if (freqVal) freqVal.textContent = w_force.toFixed(2);
+            }
+            
+            // Add event listeners
+            if (massSlider) {
+                massSlider.addEventListener('input', (e) => {
+                    m = parseFloat(e.target.value);
+                    updateValues();
+                });
+            }
+            
+            if (springSlider) {
+                springSlider.addEventListener('input', (e) => {
+                    k = parseFloat(e.target.value);
+                    updateValues();
+                });
+            }
+            
+            if (dampingSlider) {
+                dampingSlider.addEventListener('input', (e) => {
+                    c = parseFloat(e.target.value);
+                    updateValues();
+                });
+            }
+            
+            if (forceSlider) {
+                forceSlider.addEventListener('input', (e) => {
+                    F0 = parseFloat(e.target.value);
+                    updateValues();
+                });
+            }
+            
+            if (freqSlider) {
+                freqSlider.addEventListener('input', (e) => {
+                    w_force = parseFloat(e.target.value);
+                    updateValues();
+                });
+            }
+            
+            // Draw main animation
+            function drawAnimation() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Calculate response
+                const w_n = Math.sqrt(k / m);
+                const zeta = c / (2 * Math.sqrt(k * m));
+                const X = F0 / Math.sqrt(Math.pow(-m * w_force * w_force + k, 2) + Math.pow(c * w_force, 2));
+                const x = 400 + 100 * Math.cos(w_force * t);
+                const y = 200 + 50 * Math.sin(w_force * t);
+                
+                // Draw spring-mass system
+                ctx.strokeStyle = '#2563eb';
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.moveTo(50, 200);
+                ctx.lineTo(x - 30, y);
+                ctx.stroke();
+                
+                // Draw mass
+                ctx.fillStyle = '#dc2626';
+                ctx.fillRect(x - 30, y - 20, 60, 40);
+                
+                // Draw force arrow
+                ctx.strokeStyle = '#059669';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(x + 40, y);
+                ctx.lineTo(x + 80, y);
+                ctx.stroke();
+                
+                // Arrow head
+                ctx.beginPath();
+                ctx.moveTo(x + 80, y);
+                ctx.lineTo(x + 75, y - 5);
+                ctx.lineTo(x + 75, y + 5);
+                ctx.fill();
+                
+                // Draw time domain plot
+                drawTimePlot();
+                drawFreqPlot();
+                
+                t += 0.05;
+                animationId = requestAnimationFrame(drawAnimation);
+            }
+            
+            // Draw time domain response
+            function drawTimePlot() {
+                timeCtx.clearRect(0, 0, timeCanvas.width, timeCanvas.height);
+                
+                const timeWindow = 5;
+                const dt = timeWindow / timeCanvas.width;
+                
+                timeCtx.strokeStyle = '#dc2626';
+                timeCtx.lineWidth = 2;
+                timeCtx.beginPath();
+                
+                for (let i = 0; i < timeCanvas.width; i++) {
+                    const t_val = t + i * dt - timeWindow;
+                    const force = F0 * Math.sin(w_force * t_val);
+                    const x = i;
+                    const y = timeCanvas.height/2 - force * 20;
+                    if (i === 0) {
+                        timeCtx.moveTo(x, y);
+                    } else {
+                        timeCtx.lineTo(x, y);
+                    }
+                }
+                timeCtx.stroke();
+                
+                // Labels
+                timeCtx.fillStyle = '#374151';
+                timeCtx.font = '12px Arial';
+                timeCtx.fillText('Force vs Time', 10, 20);
+            }
+            
+            // Draw frequency response
+            function drawFreqPlot() {
+                freqCtx.clearRect(0, 0, freqCanvas.width, freqCanvas.height);
+                
+                const w_n = Math.sqrt(k / m);
+                const zeta = c / (2 * Math.sqrt(k * m));
+                
+                freqCtx.strokeStyle = '#2563eb';
+                freqCtx.lineWidth = 2;
+                freqCtx.beginPath();
+                
+                for (let i = 0; i < freqCanvas.width; i++) {
+                    const w = 0.1 + (i / freqCanvas.width) * 20;
+                    const H = 1 / Math.sqrt(Math.pow(-m * w * w + k, 2) + Math.pow(c * w, 2));
+                    const mag = 20 * Math.log10(Math.abs(H));
+                    const x = i;
+                    const y = freqCanvas.height/2 - mag * 2;
+                    if (i === 0) {
+                        freqCtx.moveTo(x, y);
+                    } else {
+                        freqCtx.lineTo(x, y);
+                    }
+                }
+                freqCtx.stroke();
+                
+                // Mark forcing frequency
+                const freqX = (w_force - 0.1) / 20 * freqCanvas.width;
+                freqCtx.fillStyle = '#dc2626';
+                freqCtx.beginPath();
+                freqCtx.arc(freqX, freqCanvas.height/2, 3, 0, 2*Math.PI);
+                freqCtx.fill();
+                
+                // Labels
+                freqCtx.fillStyle = '#374151';
+                freqCtx.font = '12px Arial';
+                freqCtx.fillText('Frequency Response', 10, 20);
+            }
+            
+            // Initialize
+            updateValues();
+            drawAnimation();
+        });
+    </script>
+</body>
+</html>
